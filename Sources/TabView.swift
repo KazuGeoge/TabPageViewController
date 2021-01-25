@@ -169,7 +169,6 @@ extension TabView {
                 currentCell.highlightTitle()
             }
 
-            let width = abs(scrollRate) * (nextCell.frame.width - currentCell.frame.width)
             if isInfinity {
                 let scroll = scrollRate * distance
                 collectionView.contentOffset.x = collectionViewContentOffsetX + scroll
@@ -180,7 +179,6 @@ extension TabView {
                     currentBarViewLeftConstraint?.constant = currentCell.frame.minX + nextCell.frame.width * scrollRate
                 }
             }
-            currentBarViewWidthConstraint.constant = currentBarViewWidth + width
         }
     }
 
